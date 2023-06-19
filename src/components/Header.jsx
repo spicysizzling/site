@@ -1,12 +1,5 @@
-import { useContext, useState } from 'react';
-import { NavContext } from '../context/NavContext';
+import { useState } from 'react';
 function Header() {
-    const { activeLinkId } = useContext(NavContext);
-
-    const [isScroll, setIsScoll] = useState(false)
-    const handleScroll = () => {
-        setIsScoll(true)
-    }
     const navList = [
         {
             id: 1,
@@ -35,9 +28,12 @@ function Header() {
         },
     ]
 
+    const [currentItem, setItem] = useState("home")
+
 
     const handleClickLogo = () => {
         document.getElementById("homeSection").scrollIntoView({ behavior: "smooth" })
+        setItem("home")
     }
 
     const renderNavLink = (content) => {
@@ -47,17 +43,26 @@ function Header() {
             document.getElementById(scrollToId).scrollIntoView({ behavior: "smooth" })
         }
 
+        const handleClick = (index, e) => {
+            console.log(index);
+
+            function isIT(nav) {
+                return nav.id === index;
+            }
+
+            const element = navList.find(isIT)
+            setItem(element.title.toLocaleLowerCase())
+        };
+
         return (
-            <li key={content.id} >
-                <button onClick={handleClickNav} className={activeLinkId === content.title ? 'text-blue-700' : ''} >
-                    {content.link ? <a href={content.link} target="_blank" rel="noopener noreferrer">
+            <li key={content.id} onClick={(e) => handleClick(content.id, e)}  >
+                {content.link ? <a href={content.link} target="_blank" rel="noopener noreferrer">
+                    {content.title}
+                </a> :
+                    <button onClick={handleClickNav} className={currentItem === content.title.toLowerCase() ? 'text-greenColor font-semibold' : ""}  >
                         {content.title}
-                    </a> :
-                        <>
-                            {content.title}
-                        </>
-                    }
-                </button>
+                    </button>
+                }
             </li>
         )
     }
@@ -65,7 +70,7 @@ function Header() {
 
     // useEffect({},[props.isScroll]
     return (
-        <div onScroll={handleScroll} className={isScroll ? 'px-24 py-5  shadow-md fixed w-full sticky top-0 z-50 bg-white' : 'px-24 py-5  fixed w-full sticky top-0 z-50'}>
+        <div className={currentItem !== "home" ? 'px-24 py-5  shadow-md fixed w-full sticky top-0 z-50 bg-white' : 'px-24 py-5  fixed w-full sticky top-0 z-50'}>
             <div className=' flex justify-between'>
                 <div className=' font-bold text-greenColor text-2xl' onClick={handleClickLogo}>
                     SpicySizzling <span className="text-orangeColor">

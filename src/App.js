@@ -15,8 +15,8 @@ function App() {
     AOS.refresh();
   }, []);
   return (
-    <div className=" font-serif " >
-      <NavProvider>
+    <div className=" font-serif "   >
+      <NavProvider  >
         <Header />
         <Home />
         <About />
