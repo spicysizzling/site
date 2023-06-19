@@ -5,7 +5,7 @@ import { IoLocationOutline, IoCallOutline } from 'react-icons/io5'
 import { BiMailSend } from 'react-icons/bi'
 function Contact() {
     return (
-        <div className='h-screen flex flex-col space-y-10  p-28'>
+        <div className='h-screen flex flex-col space-y-10  p-28' data-aos="fade-up" data-aos-delay="500">
 
             <div className=''>
                 <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>

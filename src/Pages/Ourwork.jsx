@@ -29,7 +29,7 @@ const img = [
 function Ourwork() {
 
     return (
-        <div className=' flex flex-col space-y-10  p-20'>
+        <div className=' flex flex-col space-y-10  p-20' data-aos="fade-up" data-aos-delay="500">
 
             <div className=''>
                 <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>

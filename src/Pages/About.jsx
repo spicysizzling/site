@@ -7,7 +7,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function About() {
     return (
-        <div className='flex flex-col space-y-10' data-aos="fade-in" data-aos-delay="200">
+        <div className='flex flex-col space-y-10' data-aos="fade-up" data-aos-delay="500">
 
             <div>
                 <div className='flex space-x-5 justify-center'>
@@ -63,7 +63,7 @@ function About() {
             </div>
             <div className=' bg-slate-100 p-20'>
 
-                <div className=''>
+                <div className=' '  >
                     <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
