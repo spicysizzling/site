@@ -3,11 +3,13 @@ import { FaFacebookF } from 'react-icons/fa'
 import { BsInstagram } from 'react-icons/bs'
 import { IoLocationOutline, IoCallOutline } from 'react-icons/io5'
 import { BiMailSend } from 'react-icons/bi'
+import { useNav } from '../hooks/useNav'
 function Contact() {
+    const contactRef = useNav('contact') 
     return (
-        <div className='h-screen flex flex-col space-y-10  p-28' data-aos="fade-up" data-aos-delay="500">
+        <div className='h-screen flex flex-col space-y-10  p-28' id='contactSection' ref={contactRef} >
 
-            <div className=''>
+            <div className='' data-aos="fade-up" data-aos-delay="200">
                 <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
                     <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                     <span>
@@ -16,7 +18,7 @@ function Contact() {
                     <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
                 </h1>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between' data-aos="fade-up" data-aos-delay="500">
                 <div className=''>
                     <h1 className='text-4xl mb-4 font-semibold'> SpicySizzling Catering</h1>
                     <p className='text-md  text-gray-500  leading-loose w-96 font-light mb-4'>
@@ -27,15 +29,14 @@ function Contact() {
                         <a href="https://instagram.com/spicysizzlingcatering" target='_blank' rel='noreferrer' className='border p-3 rounded-full border-orangeColor text-orangeColor hover:bg-orangeColor hover:text-white text-xl'> <BsInstagram /></a>
                     </div>
                 </div>
-                <div className='flex flex-col space-y-10'>
+                <div className='flex flex-col space-y-10' data-aos="fade-up" data-aos-delay="500">
                     <div className='flex space-x-3'>
                         <IoLocationOutline className='text-4xl text-orangeColor' />
                         <p>
                             1 Oyekunle Street, Off Ikorodu Club Avenue, Ikorodu, Lagos
                         </p>
                     </div>
-
-                    <div className='flex space-x-3 text-greenColor'>
+                    <div className='flex space-x-3 text-greenColor' >
                         <BiMailSend className='text-4xl text-orangeColor' />
                         <a href="mailto:">spicysizzling@gmail.com</a>
                     </div>

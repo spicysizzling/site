@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React  from 'react'
+import { useNav } from '../hooks/useNav';
 
 const img = [
     {
@@ -28,10 +29,11 @@ const img = [
 ]
 function Ourwork() {
 
+    const workRef = useNav('ourwork')
     return (
-        <div className=' flex flex-col space-y-10  p-20' data-aos="fade-up" data-aos-delay="500">
+        <div className=' flex flex-col space-y-10  p-20' id="ourworkSection" ref={workRef}  >
 
-            <div className=''>
+            <div className='' data-aos="fade-up" data-aos-delay="200">
                 <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
                     <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                     <span>
@@ -41,7 +43,7 @@ function Ourwork() {
                 </h1>
                 <p className='text-center mt-5 text-gray-700'>Checkout our Work</p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="500">
                 <div className='grid grid-cols-3 gap-4'>
                     {
                         img.map((item) => {

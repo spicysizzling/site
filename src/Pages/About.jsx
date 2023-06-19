@@ -4,10 +4,12 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useNav } from '../hooks/useNav';
 
 function About() {
+    const aboutRef = useNav('about')
     return (
-        <div className='flex flex-col space-y-10'>
+        <div className='flex flex-col space-y-10  py-28 mt-0' id='aboutSection' ref={aboutRef}>
 
             <div  >
                 <div className='flex space-x-5 justify-center'>
@@ -63,7 +65,7 @@ function About() {
             </div>
             <div className=' bg-slate-100 p-20'>
 
-                <div className=' '  >
+                <div  data-aos="fade-up" data-aos-delay="200"  >
                     <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
@@ -73,7 +75,7 @@ function About() {
                     </h1>
                     <p className='text-center mt-5 text-gray-700'>Happy customers feedback on social medial platform of our services</p>
                 </div>
-                <div className=''>
+                <div  data-aos="fade-up" data-aos-delay="400">
                     <OwlCarousel items={1}
                         className=""
                         loop autoPlay={true}
