@@ -29,9 +29,9 @@ function Header() {
         },
     ]
     return (
-        <div className='px-28 py-5  w-full sticky top-0 z-50 '>
+        <div className='px-24 py-5 shadow-md fixed w-full sticky top-0 z-50 bg-white'>
             <nav className=' flex justify-between'>
-                <div className=' font-semibold text-greenColor text-2xl'>
+                <div className=' font-bold text-greenColor text-2xl'>
                     SpicySizzling <span className="text-orangeColor">
                         Catering</span>
                 </div>

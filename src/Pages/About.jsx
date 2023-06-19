@@ -7,11 +7,11 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function About() {
     return (
-        <div className='flex flex-col space-y-10' data-aos="fade-up" data-aos-delay="500">
+        <div className='flex flex-col space-y-10'>
 
-            <div>
+            <div  >
                 <div className='flex space-x-5 justify-center'>
-                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
+                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'  data-aos="fade-up" data-aos-delay="200" >
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             ABOUT US
@@ -20,8 +20,8 @@ function About() {
                     </h1>
                 </div>
                 <div className='flex justify-between space-x-12 text-justify text-md font-light text-gray-700  mx-32 m-10  transition-all duration-100  '>
-                    <div>
-                        <p className='leading-loose  '>
+                    <div  data-aos="fade-up" data-aos-delay="500">
+                        <p className='leading-loose  ' >
                             At Spicysizzling Catering, we offer top quality catering service be it at weddings, anniversaries, graduation ceremonies, seminars, conferences, workshops, etc. We create strong bonds with our exquisite meals at your events. We'll turn the sweet moments you're celebrating at your event to fond memories with our show-stopping cakes and meals. Cutting of cake is the focal point of every event and it makes every event special.
                         </p>
                         <div className='leading-loose '>
@@ -42,7 +42,7 @@ function About() {
                             </ul>
                         </div>
                     </div>
-                    <div>
+                    <div  data-aos="fade-up" data-aos-delay="500">
                         <p className='leading-loose '>
                             Also, cakes make your guests happy, after all, when organising an event, your priority is to make sure that your guests leave happily and with unforgettable memories. All these and more are what we make happen. So, for your pastries, small chops (finger foods), cakes, cupcakes, mini cakes of different shapes, contact us and let's be part of your event.
                         </p>

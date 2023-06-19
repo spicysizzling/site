@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  spicy_app:
+    build: .
+    image: spicysizzling_site
+    container_name: spicysizzling_site
+    restart: always
+    ports:
+      - 9000:80
