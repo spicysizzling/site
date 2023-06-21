@@ -3,7 +3,7 @@ import { NavContext } from "../context/NavContext";
 import { useOnScreen } from "./useOnScreen";
 
 export const useNav = (navLinkId) => {
-  const ref = useRef(null);
+  const ref = useRef("home");
   const { setActiveLinkId } = useContext(NavContext);
 
   const isOnScreen = useOnScreen(ref);

@@ -56,17 +56,18 @@ function Ourwork({ handleOpenModal }) {
     };
 
 
-    const workRef = useNav('Our work')
+    const workRef = useNav('ourwork ')
+
     return (
         <section id="ourworkSection" ref={workRef}>
             <div className=' flex flex-col space-y-10 p-20'   >
                 <div className='' data-aos="fade-up" data-aos-delay="200">
-                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
-                        <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
+                    <h1 className=' lg:space-x-4 space-x-3 justify-center text-2xl lg:text-4xl font-semibold flex'>
+                        <div className=' mt-4 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             PORTFOLIO
                         </span>
-                        <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
+                        <div className=' mt-4 border h-[2px] w-16 border-orangeColor'></div>
                     </h1>
                     <p className='text-center mt-5 text-gray-700'>
                         <Trans i18nKey="description.part4">
@@ -75,13 +76,13 @@ function Ourwork({ handleOpenModal }) {
                     </p>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="500">
-                    <div className='grid grid-cols-3 gap-4 p-10 px-20'>
+                    <div className='lg:grid lg:grid-cols-3 flex flex-col space-y-12 gap-4 lg:p-10 lg:px-20'>
                         {
                             img.map((item) => {
                                 return (
                                     <div key={item.id} className=' hover:opacity-50 cursor-pointer' onClick={(e) => handleClick(item.id, e)} >
                                         {/* <a href={item.image} data-gall="myGallery" className='venobox' > */}
-                                        <img src={item.image} alt='' className='w-80 h-[55vh]  rounded-lg' />
+                                        <img src={item.image} alt='' className='   rounded-lg' />
                                         {/* </a> */}
                                     </div>
                                 );

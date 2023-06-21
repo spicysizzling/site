@@ -10,11 +10,11 @@ import { Trans } from 'react-i18next';
 function About() {
     const aboutRef = useNav('about')
     return (
-        <div className='flex flex-col space-y-10  py-28 mt-0' id='aboutSection' ref={aboutRef}>
+        <div className='flex flex-col space-y-10  py-28 mt-0 h-full ' id='aboutSection' ref={aboutRef}>
 
             <div  >
-                <div className='flex space-x-5 justify-center'>
-                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex' data-aos="fade-up" data-aos-delay="200" >
+                <div className='lg:flex lg:space-x-5 justify-center'>
+                    <h1 className=' space-x-4 justify-center text-xl lg:text-4xl font-semibold flex' data-aos="fade-up" data-aos-delay="200" >
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             <Trans i18nKey="description.title2" >
@@ -24,14 +24,14 @@ function About() {
                         <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
                     </h1>
                 </div>
-                <div className='flex justify-between  space-x-12 text-justify text-md font-light text-gray-700  mx-32 m-10  transition-all duration-100  '>
+                <div className='lg:flex justify-between  lg:space-x-12 text-justify text-md font-light text-gray-700  lg:mx-32 mx-10 m-10  transition-all duration-100  '>
                     <div data-aos="fade-up" data-aos-delay="500">
                         <p className='leading-loose   ' >
                             <Trans i18nKey="description.part2First">
                                 Spicysizzling Cakes turns the sweet moments at your events such as weddings, graduations, seminars, anniversaries, etc to fond memories with our exquisite and luscious cakes.
                             </Trans>
                         </p>
-                        <div className='leading-loose mt-10 '>
+                        <div className='leading-loose lg:mt-10 '>
                             <Trans i18nKey="description.part2ListTitle">
                                 Contact us for your :
                             </Trans>
@@ -47,19 +47,25 @@ function About() {
                                     <Trans i18nKey="description.part2List2">
                                         Cakes
                                     </Trans>
+                                </li> 
+                                <li className=' flex lg:hidden'>
+                                    <BsCheck2All className='mx-2  text-xl text-orangeColor' />
+                                    <Trans i18nKey="description.part2List3">
+                                        Cupcakes
+                                    </Trans>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="500">
-                        <p className='leading-loose w-[40vw]'>
+                        <p className='leading-loose lg:w-[40vw]'>
                             <Trans i18nKey="description.part2Second">
                                 Also, cakes make your guests happy, after all, when organising an event, your priority is to make sure that your guests leave happily and with unforgettable memories. All these and more are what we make happen. So, for your pastries, cakes, cupcakes, mini cakes of different shapes, contact us and let's be part of your event.
                             </Trans>
                         </p>
                         <div>
                             <ul className='my-5'>
-                                <li className='flex'>
+                            <li className='lg:flex hidden'>
                                     <BsCheck2All className='mx-2  text-xl text-orangeColor' />
                                     <Trans i18nKey="description.part2List3">
                                         Cupcakes
@@ -79,7 +85,7 @@ function About() {
             <div className=' bg-slate-100 p-20'>
 
                 <div data-aos="fade-up" data-aos-delay="200"  >
-                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
+                    <h1 className=' space-x-4 justify-center  lg:text-4xl text-xl font-semibold flex'>
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             <Trans i18nKey="description.title3">
@@ -100,22 +106,22 @@ function About() {
                         loop autoPlay={true}
                         margin={8} >
 
-                        <div className=" p-20">
-                            <div className=" bg-white p-16 rounded shadow-lg  ">
+                        <div className=" lg:p-20">
+                            <div className=" bg-white lg:p-16 p-5  rounded shadow-lg  ">
                                 <h3 className='text-xl font-semibold mb-4'>Olumuyiwa Ojo</h3>
                                 <p className='italic leading-loose text-md  flex '>
-                                    <FaQuoteLeft className='text-6xl mx-2 text-slate-300' />
+                                    <FaQuoteLeft className='lg:text-6xl text-lg mx-2 text-slate-300' />
                                     <Trans i18nKey="description.part3Text1">
                                         Many thanks for coming to prepare the amazing job and delicious cakes and meatpies for our invitedguests during the presentation of our movie at Brasil Consulate in Lagos. We called you 36hours toinform you of what we need, and then your appeared with your staff, as if you have been briefed some months earlier.
                                     </Trans>
-                                    <FaQuoteRight className='text-6xl mx-2 text-slate-300' />
+                                    <FaQuoteRight className='lg:text-6xl mx-2 text-slate-300' />
                                 </p>
                             </div>
                         </div>
 
 
-                        <div className="p-20">
-                            <div className="bg-white p-20 rounded shadow-lg">
+                        <div className="lg:p-20">
+                            <div className="bg-white   lg:p-20 p-4 rounded shadow-lg">
                                 <h3 className='text-xl font-semibold mb-4' >Mrs Owoyemi Tokunbo</h3>
                                 <p className='italic leading-loose text-md  flex '>
                                     <FaQuoteLeft className='text-6xl mx-2 text-slate-300' />
@@ -127,8 +133,8 @@ function About() {
                             </div>
                         </div>
 
-                        <div className="p-20">
-                            <div className="bg-white p-20 rounded shadow-lg">
+                        <div className="lg:p-20">
+                            <div className="bg-white lg:p-20 p-4 rounded shadow-lg">
                                 <h3 className='text-xl font-semibold mb-4'>Faith Ogbonna</h3>
                                 <p className='italic leading-loose text-smd  flex  '>
                                     <FaQuoteLeft className=' text-6xl mx-2 text-slate-300' />
