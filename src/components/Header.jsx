@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react';
 import { NavContext } from '../context/NavContext';
 import { Trans } from 'react-i18next';
-import {IoMenu}  from 'react-icons/io5'
-function Header({handleOpenNav}) {
+import { IoMenu } from 'react-icons/io5'
+function Header({ handleOpenNav }) {
     const { activeLinkId } = useContext(NavContext);
     const navList = [
         {
@@ -71,17 +71,17 @@ function Header({handleOpenNav}) {
 
     // useEffect({},[props.isScroll]
     return (
-        <div className={currentItem !== "home" || activeLinkId !== "home" ? 'lg:px-24 px-6 py-5  shadow-md fixed w-full sticky top-0 z-30 bg-white' : 'lg:px-24   px-6 py-5  lg:shadow-none  shadow-md fixed w-full sticky top-0 z-30 lg:bg-whites'}>
+        <div className={currentItem !== "home" || activeLinkId !== "home" ? 'lg:px-24 px-6 py-5  shadow-md fixed w-full sticky top-0 z-30 bg-white' : 'lg:px-24   px-6 py-5  lg:shadow-none  shadow-md fixed w-full sticky top-0 z-30  bg-white lg:bg-transparent '}>
             <div className=' flex justify-between'>
                 <div className=' font-bold text-greenColor lg:text-2xl text-xl' onClick={handleClickLogo}>
                     SpicySizzling <span className="text-orangeColor">
                         Catering</span>
                 </div>
                 <div className='lg:hidden  border p-2 shadow-md' onClick={handleOpenNav}>
-                    <IoMenu className='text-xl'/>
+                    <IoMenu className='text-xl' />
                 </div>
 
-                <nav  className='hidden lg:flex '>
+                <nav className='hidden lg:flex '>
                     <ul className='flex space-x-4'>
                         {
                             navList.map((item) => renderNavLink(item))

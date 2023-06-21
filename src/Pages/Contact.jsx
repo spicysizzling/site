@@ -47,7 +47,7 @@ function Contact() {
 
                     <div className='flex space-x-3 text-greenColor'>
                         <IoCallOutline className='text-4xl text-orangeColor' />
-                        <a href="https://api.whatsapp.com/send?phone=2348096886785&text=Reaching%20you%20from%20your%20website" target="_blank" rel='noreferrer'>whatsapp</a>
+                        <a href="https://web.whatsapp.com/send/?phone=+22994527024&text=Reaching+you+from+your+website" target="_blank" rel='noreferrer'>whatsapp</a>
                     </div>
                 </div>
             </div>
