@@ -55,7 +55,7 @@ function App() {
             />
           </div>
           <div className='flex justify-center items-center'>
-            <img src={selectedImage} alt='' className='w-[80%] h-[60vh]' />
+            <img src={selectedImage} alt='' className='lg:w-[60%]  w-[80%] h-[60vh] lg:h-[70vh] rounded' />
           </div>
         </div>
       }
