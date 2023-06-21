@@ -15,13 +15,13 @@ function About() {
             <div  >
                 <div className='lg:flex lg:space-x-5 justify-center'>
                     <h1 className=' space-x-4 justify-center text-xl lg:text-4xl font-semibold flex' data-aos="fade-up" data-aos-delay="200" >
-                        <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
+                        <div className=' mt-4 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             <Trans i18nKey="description.title2" >
                                 About us
                             </Trans>
                         </span>
-                        <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
+                        <div className=' mt-4 border h-[2px] w-16 border-orangeColor'></div>
                     </h1>
                 </div>
                 <div className='lg:flex justify-between  lg:space-x-12 text-justify text-md font-light text-gray-700  lg:mx-32 mx-10 m-10  transition-all duration-100  '>
@@ -86,13 +86,13 @@ function About() {
 
                 <div data-aos="fade-up" data-aos-delay="200"  >
                     <h1 className=' space-x-4 justify-center  lg:text-4xl text-xl font-semibold flex'>
-                        <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
+                        <div className=' mt-4 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             <Trans i18nKey="description.title3">
                                 TESTIMONIALS
                             </Trans>
                         </span>
-                        <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
+                        <div className=' mt-4 border h-[2px] w-16 border-orangeColor'></div>
                     </h1>
                     <p className='text-center mt-5 text-gray-700'>
                         <Trans i18nKey="description.subTitle3">

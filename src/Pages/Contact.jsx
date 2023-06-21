@@ -11,13 +11,13 @@ function Contact() {
         <div className='lg:h-screen flex flex-col lg:space-y-10  mb-10  lg:p-28' id='contactSection' ref={contactRef} >
             <div className='' data-aos="fade-up" data-aos-delay="200">
                 <h1 className=' space-x-4 justify-center text-xl  lg:text-4xl font-semibold flex'>
-                    <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
+                    <div className=' mt-4 border h-[2px]  w-16 border-orangeColor'></div>
                     <span>
                         <Trans i18nKey="description.title5">
                             CONTACT US
                         </Trans>
                     </span>
-                    <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
+                    <div className=' mt-4 border h-[2px] w-16 border-orangeColor'></div>
                 </h1>
             </div>
             <div className='lg:flex justify-between' data-aos="fade-up" data-aos-delay="500">
