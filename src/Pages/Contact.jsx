@@ -7,7 +7,7 @@ import { useNav } from '../hooks/useNav'
 function Contact() {
     const contactRef = useNav('contact') 
     return (
-        <div className='h-screen flex flex-col space-y-10  p-28' id='contactSection' ref={contactRef} >
+        <div className='h-screen flex flex-col space-y-10   p-28' id='contactSection' ref={contactRef} >
 
             <div className='' data-aos="fade-up" data-aos-delay="200">
                 <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>

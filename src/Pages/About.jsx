@@ -13,7 +13,7 @@ function About() {
 
             <div  >
                 <div className='flex space-x-5 justify-center'>
-                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'  data-aos="fade-up" data-aos-delay="200" >
+                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex' data-aos="fade-up" data-aos-delay="200" >
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
                             ABOUT US
@@ -21,10 +21,10 @@ function About() {
                         <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
                     </h1>
                 </div>
-                <div className='flex justify-between space-x-12 text-justify text-md font-light text-gray-700  mx-32 m-10  transition-all duration-100  '>
-                    <div  data-aos="fade-up" data-aos-delay="500">
+                <div className='flex justify-between  space-x-40 text-justify text-md font-light text-gray-700  mx-32 m-10  transition-all duration-100  '>
+                    <div data-aos="fade-up" data-aos-delay="500">
                         <p className='leading-loose  ' >
-                            At Spicysizzling Catering, we offer top quality catering service be it at weddings, anniversaries, graduation ceremonies, seminars, conferences, workshops, etc. We create strong bonds with our exquisite meals at your events. We'll turn the sweet moments you're celebrating at your event to fond memories with our show-stopping cakes and meals. Cutting of cake is the focal point of every event and it makes every event special.
+                            Spicysizzling Cakes turns the sweet moments at your events such as weddings, graduations, seminars, anniversaries, etc to fond memories with our exquisite and luscious cakes.
                         </p>
                         <div className='leading-loose '>
                             Contact us for your :
@@ -35,18 +35,14 @@ function About() {
                                 </li>
                                 <li className='flex'>
                                     <BsCheck2All className='mx-2 mt-1 text-xl text-orangeColor' />
-                                    Small chops (finger  foods )
-                                </li>
-                                <li className='flex'>
-                                    <BsCheck2All className='mx-2 mt-1 text-xl text-orangeColor' />
                                     Cakes
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div  data-aos="fade-up" data-aos-delay="500">
+                    <div data-aos="fade-up" data-aos-delay="500">
                         <p className='leading-loose '>
-                            Also, cakes make your guests happy, after all, when organising an event, your priority is to make sure that your guests leave happily and with unforgettable memories. All these and more are what we make happen. So, for your pastries, small chops (finger foods), cakes, cupcakes, mini cakes of different shapes, contact us and let's be part of your event.
+                            Also, cakes make your guests happy, after all, when organising an event, your priority is to make sure that your guests leave happily and with unforgettable memories. All these and more are what we make happen. So, for your pastries, cakes, cupcakes, mini cakes of different shapes, contact us and let's be part of your event.
                         </p>
                         <div>
                             <ul className='my-5'>
@@ -65,7 +61,7 @@ function About() {
             </div>
             <div className=' bg-slate-100 p-20'>
 
-                <div  data-aos="fade-up" data-aos-delay="200"  >
+                <div data-aos="fade-up" data-aos-delay="200"  >
                     <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
                         <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
                         <span>
@@ -75,7 +71,7 @@ function About() {
                     </h1>
                     <p className='text-center mt-5 text-gray-700'>Happy customers feedback on social medial platform of our services</p>
                 </div>
-                <div  data-aos="fade-up" data-aos-delay="400">
+                <div data-aos="fade-up" data-aos-delay="400">
                     <OwlCarousel items={1}
                         className=""
                         loop autoPlay={true}

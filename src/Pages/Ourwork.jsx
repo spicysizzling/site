@@ -1,4 +1,5 @@
-import React  from 'react'
+import React, { useEffect, useState } from 'react'
+import { IoClose } from 'react-icons/io5'
 import { useNav } from '../hooks/useNav';
 
 const img = [
@@ -27,38 +28,49 @@ const img = [
         image: "/6.jpg"
     }
 ]
-function Ourwork() {
+function Ourwork({ handleOpenModal }) { 
+    const handleClick = (index, e) => {
 
-    const workRef = useNav('ourwork')
+        function isIT(ig) {
+            return ig.id === index;
+        }
+
+        const element = img.find(isIT)
+        handleOpenModal(element.image)
+    };
+
+
+    const workRef = useNav('Our work')
     return (
-        <div className=' flex flex-col space-y-10  p-20' id="ourworkSection" ref={workRef}  >
-
-            <div className='' data-aos="fade-up" data-aos-delay="200">
-                <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
-                    <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
-                    <span>
-                        PORTFOLIO
-                    </span>
-                    <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
-                </h1>
-                <p className='text-center mt-5 text-gray-700'>Checkout our Work</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="500">
-                <div className='grid grid-cols-3 gap-4'>
-                    {
-                        img.map((item) => {
-                            return (
-                                <div key={item.id} className=' hover:opacity-1 cursor-pointer' >
-                                    <a href={item.image} data-gall="myGallery" className='venobox' >
+        <section id="ourworkSection" ref={workRef}>
+            <div className=' flex flex-col space-y-10 p-20'   >
+                <div className='' data-aos="fade-up" data-aos-delay="200">
+                    <h1 className=' space-x-4 justify-center  text-4xl font-semibold flex'>
+                        <div className=' mt-5 border h-[2px]  w-16 border-orangeColor'></div>
+                        <span>
+                            PORTFOLIO
+                        </span>
+                        <div className=' mt-5 border h-[2px] w-16 border-orangeColor'></div>
+                    </h1>
+                    <p className='text-center mt-5 text-gray-700'>Checkout our Work</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500">
+                    <div className='grid grid-cols-3 gap-4'>
+                        {
+                            img.map((item) => {
+                                return (
+                                    <div key={item.id} className=' hover:opacity-1 cursor-pointer' onClick={(e) => handleClick(item.id, e)} >
+                                        {/* <a href={item.image} data-gall="myGallery" className='venobox' > */}
                                         <img src={item.image} alt='' className='w-96 h-[60vh]' />
-                                    </a>
-                                </div>
-                            );
-                        })
-                    }
+                                        {/* </a> */}
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { NavContext } from '../context/NavContext';
 function Header() {
+    const { activeLinkId } = useContext(NavContext);
     const navList = [
         {
             id: 1,
@@ -59,7 +61,7 @@ function Header() {
                 {content.link ? <a href={content.link} target="_blank" rel="noopener noreferrer">
                     {content.title}
                 </a> :
-                    <button onClick={handleClickNav} className={currentItem === content.title.toLowerCase() ? 'text-greenColor font-semibold' : ""}  >
+                    <button onClick={handleClickNav} className={ currentItem === content.title.toLowerCase() ? 'text-greenColor font-semibold' : ""}  >
                         {content.title}
                     </button>
                 }
@@ -70,7 +72,7 @@ function Header() {
 
     // useEffect({},[props.isScroll]
     return (
-        <div className={currentItem !== "home" ? 'px-24 py-5  shadow-md fixed w-full sticky top-0 z-50 bg-white' : 'px-24 py-5  fixed w-full sticky top-0 z-50'}>
+        <div className={currentItem !== "home" ? 'px-24 py-5  shadow-md fixed w-full sticky top-0 z-40 bg-white' : 'px-24 py-5  fixed w-full sticky top-0 z-50'}>
             <div className=' flex justify-between'>
                 <div className=' font-bold text-greenColor text-2xl' onClick={handleClickLogo}>
                     SpicySizzling <span className="text-orangeColor">
