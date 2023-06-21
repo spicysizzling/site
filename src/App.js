@@ -9,6 +9,7 @@ import Ourwork from './Pages/Ourwork';
 import Header from './components/Header';
 import NavProvider from "./context/NavContext";
 import Footer from "./components/Footer";
+import { useTranslation, Trans } from 'react-i18next';
 
 function App() {
 
